@@ -32,7 +32,7 @@ public class StringAnalyzer {
                 .orElse(0);
     }
 
-     public static List<String> findLinesThatShorterThan(List<String> lines, int num) {
+     public static List<String> findLinesThatShorterThan(List<String> lines, double num) {
         return lines
                 .stream()
                 .filter((str) -> str.length() < num )

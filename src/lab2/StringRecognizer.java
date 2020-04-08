@@ -19,13 +19,13 @@ public class StringRecognizer {
 
     public Optional<String> getInputType(String input) {
         return Stream.of(Analyzers.values())
-                .filter(analyzer -> analyzer.match(input))
+                .filter(analyzer -> analyzer.matches(input))
                 .findFirst()
                 .map(Analyzers::toString);
     }
 
     public boolean inputHasType(String input, String type) throws IllegalArgumentException {
         Analyzers analyzer = Analyzers.valueOf(type);
-        return analyzer.match(input);
+        return analyzer.matches(input);
     }
 }

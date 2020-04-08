@@ -5,25 +5,31 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        int amount = IOManager.getPositiveInteger("Enter number of lines");
+        IOManager.printLine("Enter number of lines");
+        int amount = IOManager.getPositiveInteger();
 
-        List<String> lines = IOManager.getLines(amount, "Enter your lines");
+        IOManager.printLine("Enter your lines");
+        List<String> lines = IOManager.getLines(amount);
 
         String longestLine = StringAnalyzer.getLongestLine(lines);
 
-        IOManager.printLines(lines, "", "Your lines is:", false);
+        IOManager.printLine("Your lines is:");
+        IOManager.printLines(lines,  false);
 
-        IOManager.printLineWithLength(longestLine, "\n The longest line is: \n");
+        IOManager.printLine("\n The longest line is: \n");
+        IOManager.printLineWithLength(longestLine);
 
         List<String> sortedLines = StringAnalyzer.sortLinesByLength(lines, true);
 
-        IOManager.printLines(sortedLines, "", "\n Sorted by length:", true);
+        IOManager.printLine("\n Sorted by length:");
+        IOManager.printLines(sortedLines, true);
 
         double averageLength = StringAnalyzer.getAverageLinesLength(lines);
 
-        List<String> shorterThanAverage = StringAnalyzer.findLinesThatShorterThan(lines, ((int) averageLength));
+        List<String> shorterThanAverage = StringAnalyzer.findLinesThatShorterThan(lines, averageLength);
 
-        IOManager.printLines(shorterThanAverage, "", "\n Shorter than average length:", true);
+        IOManager.printLine("\n Shorter than average length:");
+        IOManager.printLines(shorterThanAverage,   true);
 
     }
 }

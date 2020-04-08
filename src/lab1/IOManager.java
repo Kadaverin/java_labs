@@ -1,78 +1,76 @@
 package lab1;
 
+import lab1.exceptions.EmptyInputException;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class IOManager {
     private static BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
 
-    public static String getLine(String promptMsg) {
-        String res = null;
+    public static String getLine(String promptMsg) throws EmptyInputException, IOException {
+        String res;
 
-        if(promptMsg != null) {
+        if (promptMsg != null) {
             System.out.println(promptMsg);
         }
 
-        try {
-            res = inputReader.readLine();
-        } catch (IOException e) {
-            System.err.println("An IOException was caught :" + e.getMessage());
+        res = inputReader.readLine();
+
+        if(res.trim().isEmpty()) {
+            throw new EmptyInputException("You entered a blank line");
         }
 
         return res;
     }
 
-    public static List<String> getLines(int amount, String promtMsg)  {
-        System.out.println(promtMsg);
+    public static String getLine() throws EmptyInputException, IOException {
+        return getLine(null);
+    }
 
+    public static List<String> getLines(int amount) {
         List<String> res = new ArrayList<>();
 
-        try {
-            for( int i = 0; i < amount; i++ ) {
-                res.add(inputReader.readLine());
+        while(amount != 0) {
+            try {
+                String str = getLine();
+                res.add(str);
+                amount--;
+            } catch (IOException ioException) {
+                System.err.println("An IOException was caught :" + ioException.getMessage());
+            } catch (EmptyInputException emptyInputException) {
+                System.err.println(emptyInputException.getMessage());
             }
-        } catch (IOException e) {
-            System.err.println("An IOException was caught :" + e.getMessage());
         }
 
         return res;
     }
 
-    public static int getPositiveInteger(String promtMsg) {
+    public static int getPositiveInteger() {
         int inputInt = -1;
-        System.out.println(promtMsg);
 
-        while(inputInt < 0) {
+        while (inputInt < 0) {
             try {
-                System.out.print("Please, enter the positive integer: ");
-                inputInt = Integer.parseInt(inputReader.readLine());
-              } catch(NumberFormatException nfe ) {
-
+                inputInt = Integer.parseInt(getLine("Please, enter the positive integer: "));
+            } catch (NumberFormatException nfe) {
+                System.err.println("Your input is not an integer");
             } catch (IOException e) {
-                System.err.println("An IOException was caught :"+e.getMessage());
+                System.err.println("An IOException was caught :" + e.getMessage());
+            } catch (EmptyInputException emptyInputException) {
+                System.err.println(emptyInputException.getMessage());
             }
         }
 
         return inputInt;
     }
 
-    public static void printLineWithLength(String line, String caption) {
+    public static void printLineWithLength(String line) {
         System.out.println(String.format(
-                "%s \"%s\", length: %d",
-                caption,
+                "\"%s\", length: %d",
                 line,
                 line.length()
-                )
-        );
-    }
-
-    public static void printLine(String line, String lineCaption) {
-        System.out.println(String.format(
-                "%s \"%s\"",
-                lineCaption,
-                line
                 )
         );
     }
@@ -81,15 +79,12 @@ public class IOManager {
         System.out.println(line);
     }
 
-    public static void printLines(List<String> lines, String lineCaption, String mainCaption, boolean showLength) {
-        if (mainCaption.length() > 0) {
-            System.out.println(mainCaption);
-        }
-
-        BiConsumer<String, String> methodToCall = showLength
+    public static void printLines(List<String> lines, boolean showLength) {
+        Consumer<String> methodToCall = showLength
                 ? IOManager::printLineWithLength
                 : IOManager::printLine;
 
-        lines.forEach(line -> methodToCall.accept(line, lineCaption));
+        lines.forEach(line -> methodToCall.accept(line));
     }
+
 }
