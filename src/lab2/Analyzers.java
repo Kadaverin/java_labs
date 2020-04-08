@@ -1,7 +1,9 @@
 package lab2;
 
 
+import java.util.Optional;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public enum Analyzers {
     GUID(RegExpStrings.GUID),
@@ -26,6 +28,13 @@ public enum Analyzers {
 
     private Pattern getPattern() {
         return this.pattern;
+    }
+
+    public static Optional<String> getInputType(String input) {
+        return Stream.of(Analyzers.values())
+                .filter(analyzer -> analyzer.matches(input))
+                .findFirst()
+                .map(Analyzers::toString);
     }
 }
 

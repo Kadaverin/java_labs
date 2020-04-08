@@ -1,16 +1,19 @@
 package coords;
 
+import common.utils.IOManager;
+
 public class Main {
     public static void main(String[] args) {
+        IOManager ioManager = IOManager.getInstance();
         Plane plane = new Plane();
         plane.generatePoints();
 
-        System.out.println("\nAll plane with points (marked as 'X'):");
+        ioManager.printLine("\nAll plane with points (marked as 'X'):");
         plane.print();
 
         Point leastRemote = plane.getPointLeastRemoteFromRest();
 
-        System.out.print("Point that least remote from rest points has coordinates ");
-        System.out.println(leastRemote);
+        ioManager.printLine("Point that least remote from rest points has coordinates ");
+        ioManager.printLine(leastRemote.toString());
     }
 }

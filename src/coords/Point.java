@@ -26,6 +26,6 @@ public class Point {
     }
 
     public String toString() {
-        return String.format( "[%d ; %d]", this.getX(), this.getY());
+        return String.format("[%d ; %d]", this.getX(), this.getY());
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 public class Plane {
     private List<Point> points;
 
-    public  Plane() {
+    public Plane() {
         this.points = new ArrayList<>();
     }
 
@@ -33,18 +33,18 @@ public class Plane {
 
     public double getTotalDistanceToRestPoints(Point target) {
         return this.points
-                 .stream()
-                 .mapToDouble( point -> getPointsDistance(target, point))
-                 .sum();
+                .stream()
+                .mapToDouble(point -> getPointsDistance(target, point))
+                .sum();
     }
 
     public Point getPointLeastRemoteFromRest() {
         return this.points
                 .stream()
                 .reduce((leastRemote, current) ->
-                    getTotalDistanceToRestPoints(leastRemote) > getTotalDistanceToRestPoints(current)
-                        ? current
-                        : leastRemote
+                        getTotalDistanceToRestPoints(leastRemote) > getTotalDistanceToRestPoints(current)
+                                ? current
+                                : leastRemote
                 )
                 .orElse(null);
     }
@@ -53,27 +53,27 @@ public class Plane {
     public boolean containsXY(int x, int y) {
         return this.points
                 .stream()
-                .anyMatch(c -> y  == c.getY() && x == c.getX());
+                .anyMatch(c -> y == c.getY() && x == c.getX());
     }
 
 
     public void print() {
         MinMaxXY minMaxXY = PlaneStatistic.getMinMaxXY(this);
 
-        if( minMaxXY == null ) {
+        if (minMaxXY == null) {
             System.out.println("This plane has no points! Fill it first");
             return;
         }
 
         System.out.print('\n');
 
-        for(int y = minMaxXY.getMaxY(); y >= minMaxXY.getMinY(); y--){
-            for(int x = minMaxXY.getMinX(); x <= minMaxXY.getMaxX(); x++) {
-                if(this.containsXY(x,y)){
+        for (int y = minMaxXY.getMaxY(); y >= minMaxXY.getMinY(); y--) {
+            for (int x = minMaxXY.getMinX(); x <= minMaxXY.getMaxX(); x++) {
+                if (this.containsXY(x, y)) {
 
-                    if((x == 1) && this.containsXY(0, y)){
+                    if ((x == 1) && this.containsXY(0, y)) {
                         System.out.print(" x ");
-                    } else if((x == 0) && (y == 0)) {
+                    } else if ((x == 0) && (y == 0)) {
                         System.out.print("  x");
                     } else {
                         System.out.print("  x ");
@@ -81,17 +81,17 @@ public class Plane {
 
                 } else if ((x == 0) && (y == 0)) {
                     System.out.print("  0");
-                } else if(x == 0) {
+                } else if (x == 0) {
 
-                    if(y > 0) {
-                        System.out.print("  " + y );
+                    if (y > 0) {
+                        System.out.print("  " + y);
                     } else {
-                        System.out.print(" " + y );
+                        System.out.print(" " + y);
                     }
 
                 } else if (y == 0) {
 
-                    if( x > 0) {
+                    if (x > 0) {
                         System.out.print("  " + x + " ");
                     } else {
                         System.out.print(" " + x + " ");
@@ -99,14 +99,14 @@ public class Plane {
 
                 } else {
 
-                    if((x == 1) && this.containsXY(0, y)){
+                    if ((x == 1) && this.containsXY(0, y)) {
                         System.out.print(" . ");
                     } else {
                         System.out.print("  . ");
                     }
                 }
 
-                if(x == minMaxXY.getMaxX()){
+                if (x == minMaxXY.getMaxX()) {
                     System.out.print('\n');
                 }
             }

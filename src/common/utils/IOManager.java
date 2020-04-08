@@ -1,6 +1,6 @@
-package lab1;
+package common.utils;
 
-import lab1.exceptions.EmptyInputException;
+import common.exceptions.EmptyInputException;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,9 +8,30 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class IOManager {
-    private static BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
+    private BufferedReader inputReader;
+    private static volatile IOManager instance;
 
-    public static String getLine(String promptMsg) throws EmptyInputException, IOException {
+    private IOManager() {
+        if (instance != null) {
+            throw new RuntimeException("Use getInstance() method to get the single instance of this class.");
+        }
+
+        inputReader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    public static IOManager getInstance() {
+        if (instance == null) {
+            synchronized (IOManager.class) {
+                if (instance == null) {
+                    instance = new IOManager();
+                }
+            }
+        }
+
+        return instance;
+    }
+
+    public String getLine(String promptMsg) throws EmptyInputException, IOException {
         String res;
 
         if (promptMsg != null) {
@@ -19,21 +40,21 @@ public class IOManager {
 
         res = inputReader.readLine();
 
-        if(res.trim().isEmpty()) {
+        if (res.trim().isEmpty()) {
             throw new EmptyInputException("You entered a blank line");
         }
 
         return res;
     }
 
-    public static String getLine() throws EmptyInputException, IOException {
+    public String getLine() throws EmptyInputException, IOException {
         return getLine(null);
     }
 
-    public static List<String> getLines(int amount) {
+    public List<String> getLines(int amount) {
         List<String> res = new ArrayList<>();
 
-        while(amount != 0) {
+        while (amount != 0) {
             try {
                 String str = getLine();
                 res.add(str);
@@ -48,7 +69,7 @@ public class IOManager {
         return res;
     }
 
-    public static int getPositiveInteger() {
+    public int getPositiveInteger() {
         int inputInt = -1;
 
         while (inputInt < 0) {
@@ -66,7 +87,7 @@ public class IOManager {
         return inputInt;
     }
 
-    public static void printLineWithLength(String line) {
+    public void printLineWithLength(String line) {
         System.out.println(String.format(
                 "\"%s\", length: %d",
                 line,
@@ -75,14 +96,14 @@ public class IOManager {
         );
     }
 
-    public static void printLine(String line) {
+    public void printLine(String line) {
         System.out.println(line);
     }
 
-    public static void printLines(List<String> lines, boolean showLength) {
+    public void printLines(List<String> lines, boolean showLength) {
         Consumer<String> methodToCall = showLength
-                ? IOManager::printLineWithLength
-                : IOManager::printLine;
+                ? this::printLineWithLength
+                : this::printLine;
 
         lines.forEach(line -> methodToCall.accept(line));
     }

@@ -1,6 +1,6 @@
-package lab1.exceptions;
+package common.exceptions;
 
-public class EmptyInputException extends Exception {
+public class EmptyInputException extends RuntimeException {
     public EmptyInputException(String errorMessage) {
         super(errorMessage);
     }
