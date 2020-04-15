@@ -12,35 +12,33 @@ public class PlaneStatistic {
             throw new PlaneHasNoPointsException("Plane has no points for calculating statistics");
         }
 
-        if (points.size() > 0) {
-            Point temp = points.get(0);
+        Point temp = points.get(0);
 
-            int maxX = temp.getX();
-            int maxY = temp.getY();
-            int minX = temp.getX();
-            int minY = temp.getY();
+        int maxX = temp.getX();
+        int maxY = temp.getY();
+        int minX = temp.getX();
+        int minY = temp.getY();
 
-            for (int i = 0; i < points.size(); i++) {
-                temp = points.get(i);
+        for (int i = 1; i < points.size(); i++) {
+            temp = points.get(i);
 
-                if (temp.getX() > maxX) {
-                    maxX = temp.getX();
-                }
-
-                if (temp.getX() < minX) {
-                    minX = temp.getX();
-                }
-
-                if (temp.getY() > maxY) {
-                    maxY = temp.getY();
-                }
-
-                if (temp.getY() < minY) {
-                    minY = temp.getY();
-                }
+            if (temp.getX() > maxX) {
+                maxX = temp.getX();
             }
 
-            return new MinMaxXY(minX, maxX, minY, maxY);
-        } else { return null; }
+            if (temp.getX() < minX) {
+                minX = temp.getX();
+            }
+
+            if (temp.getY() > maxY) {
+                maxY = temp.getY();
+            }
+
+            if (temp.getY() < minY) {
+                minY = temp.getY();
+            }
+        }
+
+        return new MinMaxXY(minX, maxX, minY, maxY);
     }
 }

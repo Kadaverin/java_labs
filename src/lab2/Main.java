@@ -19,7 +19,7 @@ public class Main {
             }
         }
 
-        String inputType = Analyzers.getInputType(input).orElse("Unknown type");
+        String inputType = StringType.getInputType(input).toString();
 
         ioManager.printLine("Your input is: " + inputType);
     }

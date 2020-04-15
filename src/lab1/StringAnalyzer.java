@@ -11,7 +11,7 @@ public class StringAnalyzer {
                 .reduce((longest, current) -> current.length() > longest.length()
                         ? current
                         : longest)
-                .orElse(null);
+                .get();
     }
 
     public static List<String> sortLinesByLength(List<String> listOfStrings, boolean asc) {

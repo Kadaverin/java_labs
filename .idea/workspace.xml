@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18e04590-5c1f-4b58-94d6-183358520431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/exceptions/PlaneHasNoPointsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/AllInParallel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/AllWithJoining.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/ParallelTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/hello_java/common/FJExperiment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/hello_java/common/Transform.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/coords/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/coords/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hello_java/common/exceptions/PlaneHasNoPointsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/common/exceptions/PlaneHasNoPointsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hello_java/concurrency/ParallelTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/concurrency/ParallelTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hello_java/coords/PlaneStatistic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/coords/PlaneStatistic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab1/IOManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/lab1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab1/exaptions/EmptyInputException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab2/Analyzers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/lab2/Analyzers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/lab2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab2/StringRecognizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coords/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coords/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coords/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coords/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab1/StringAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/lab1/StringAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/exceptions/PlaneHasNoPointsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exceptions/PlaneHasNoPointsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/coords/PlaneStatistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coords/PlaneStatistic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coords/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/coords/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/IOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/IOManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/exceptions/EmptyInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/exceptions/EmptyInputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab2/Analyzers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab2/Analyzers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/StringAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/StringAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab2/Analyzers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab2/StringType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab2/StringRecognizer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,9 +84,9 @@
       <visibility group="npm scripts" flag="false" />
     </myKeys>
   </component>
-  <component name="RunManager" selected="Application.AllWithJoining">
-    <configuration name="AllWithJoining" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.AllWithJoining" />
+  <component name="RunManager" selected="Application.FJExperiment">
+    <configuration name="AllInParallel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="concurrency.AllInParallel" />
       <module name="hello_java" />
       <extension name="coverage">
         <pattern>
@@ -109,12 +98,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="coords.Main" />
+    <configuration name="FJExperiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="common.FJExperiment" />
       <module name="hello_java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="coords.*" />
+          <option name="PATTERN" value="common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForkJoinDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="common.ForkJoinDemo" />
+      <module name="hello_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,6 +130,19 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lab2.Main" />
+      <module name="hello_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,9 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AllWithJoining" />
+        <item itemvalue="Application.FJExperiment" />
+        <item itemvalue="Application.ForkJoinDemo" />
+        <item itemvalue="Application.AllInParallel" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +213,10 @@
       <workItem from="1586360272844" duration="14874000" />
       <workItem from="1586377862537" duration="340000" />
       <workItem from="1586378211458" duration="192000" />
-      <workItem from="1586378417577" duration="907000" />
+      <workItem from="1586378417577" duration="4743000" />
+      <workItem from="1586423200478" duration="5996000" />
+      <workItem from="1586506937770" duration="20000" />
+      <workItem from="1586985815402" duration="859000" />
     </task>
     <servers />
   </component>
@@ -208,30 +228,46 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="713" y="460" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586378313761" />
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586376106458">
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1586506955939">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586376106458" />
-    <state width="937" height="342" key="GridCell.Tab.0.bottom" timestamp="1586379192761">
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586506955939" />
+    <state width="937" height="300" key="GridCell.Tab.0.bottom" timestamp="1586468698076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="342" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586379192761" />
-    <state width="937" height="342" key="GridCell.Tab.0.center" timestamp="1586379192761">
+    <state width="937" height="300" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586468698076" />
+    <state width="937" height="300" key="GridCell.Tab.0.center" timestamp="1586468698076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="342" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586379192761" />
-    <state width="937" height="342" key="GridCell.Tab.0.left" timestamp="1586379192760">
+    <state width="937" height="300" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586468698076" />
+    <state width="937" height="300" key="GridCell.Tab.0.left" timestamp="1586468698076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="342" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586379192760" />
-    <state width="937" height="342" key="GridCell.Tab.0.right" timestamp="1586379192761">
+    <state width="937" height="300" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586468698076" />
+    <state width="937" height="300" key="GridCell.Tab.0.right" timestamp="1586468698076">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="342" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586379192761" />
-    <state x="443" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1586360294974">
+    <state width="937" height="300" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586468698076" />
+    <state width="937" height="501" key="GridCell.Tab.1.bottom" timestamp="1586428034716">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="443" y="130" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586360294974" />
+    <state width="937" height="501" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
+    <state width="937" height="501" key="GridCell.Tab.1.center" timestamp="1586428034716">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="501" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
+    <state width="937" height="501" key="GridCell.Tab.1.left" timestamp="1586428034716">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="501" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
+    <state width="937" height="501" key="GridCell.Tab.1.right" timestamp="1586428034716">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="937" height="501" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
+    <state x="443" y="130" width="1024" height="845" key="SettingsEditor" timestamp="1586424291069">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="443" y="130" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586424291069" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1586363499902">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
