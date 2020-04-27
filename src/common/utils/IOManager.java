@@ -51,6 +51,15 @@ public class IOManager {
         return getLine(null);
     }
 
+    public String getLineSafely() {
+        try {
+            return getLine(null);
+        } catch (Exception exception) {
+            System.err.println(exception.getMessage());
+            return null;
+        }
+    }
+
     public List<String> getLines(int amount) {
         List<String> res = new ArrayList<>();
 

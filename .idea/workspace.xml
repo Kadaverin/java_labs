@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18e04590-5c1f-4b58-94d6-183358520431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/concurrency/ExchangerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/ExecutorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/PhaserDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/concurrency/RecursiveActionDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/common/FJExperiment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/common/Transform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab2/Analyzers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hello_java/lab2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/lab2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hello_java/concurrency/ExecutorDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hello_java/concurrency/ExecutorDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/IOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/IOManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,7 @@
       <visibility group="npm scripts" flag="false" />
     </myKeys>
   </component>
-  <component name="RunManager" selected="Application.ExecutorDemo">
+  <component name="RunManager" selected="Application.WaitNotifyDemo">
     <configuration name="ExchangerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="concurrency.ExchangerDemo" />
       <module name="hello_java" />
@@ -109,19 +103,6 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="danildavydov.concurrency.coords.Main" />
-      <module name="hello_java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="danildavydov.coords.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="danildavydov.lab2.Main" />
       <module name="hello_java" />
       <extension name="coverage">
@@ -134,21 +115,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecursiveActionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.RecursiveActionDemo" />
-      <module name="hello_java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="concurrency.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SemDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="concurrency.SemDemo" />
+    <configuration name="PhaserDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="concurrency.PhaserDemo" />
       <module name="hello_java" />
       <extension name="coverage">
         <pattern>
@@ -173,13 +141,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WaitNotifyDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="concurrency.WaitNotifyDemo" />
+      <module name="hello_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExecutorDemo" />
-        <item itemvalue="Application.RecursiveActionDemo" />
-        <item itemvalue="Application.ExchangerDemo" />
+        <item itemvalue="Application.WaitNotifyDemo" />
+        <item itemvalue="Application.PhaserDemo" />
         <item itemvalue="Application.SemaphoreDemo" />
-        <item itemvalue="Application.SemDemo" />
+        <item itemvalue="Application.ExchangerDemo" />
+        <item itemvalue="Application.ExecutorDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +200,8 @@
       <workItem from="1586985815402" duration="1912000" />
       <workItem from="1587024695496" duration="2862000" />
       <workItem from="1587752287469" duration="15697000" />
-      <workItem from="1587794407289" duration="3422000" />
+      <workItem from="1587794407289" duration="8639000" />
+      <workItem from="1587974543193" duration="3000000" />
     </task>
     <servers />
   </component>
@@ -243,42 +225,42 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587753427710" />
-    <state width="937" height="270" key="GridCell.Tab.0.bottom" timestamp="1587797790957">
+    <state width="1004" height="291" key="GridCell.Tab.0.bottom" timestamp="1587979223703">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="270" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587797790957" />
-    <state width="937" height="270" key="GridCell.Tab.0.center" timestamp="1587797790957">
+    <state width="1004" height="291" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979223703" />
+    <state width="1004" height="291" key="GridCell.Tab.0.center" timestamp="1587979223703">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="270" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587797790957" />
-    <state width="937" height="270" key="GridCell.Tab.0.left" timestamp="1587797790957">
+    <state width="1004" height="291" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979223703" />
+    <state width="1004" height="291" key="GridCell.Tab.0.left" timestamp="1587979223703">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="270" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587797790957" />
-    <state width="937" height="270" key="GridCell.Tab.0.right" timestamp="1587797790957">
+    <state width="1004" height="291" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979223703" />
+    <state width="1004" height="291" key="GridCell.Tab.0.right" timestamp="1587979223703">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="270" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587797790957" />
-    <state width="937" height="501" key="GridCell.Tab.1.bottom" timestamp="1586428034716">
+    <state width="1004" height="291" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979223703" />
+    <state width="937" height="322" key="GridCell.Tab.1.bottom" timestamp="1587979193500">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="501" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
-    <state width="937" height="501" key="GridCell.Tab.1.center" timestamp="1586428034716">
+    <state width="937" height="322" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979193500" />
+    <state width="937" height="322" key="GridCell.Tab.1.center" timestamp="1587979193500">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="501" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
-    <state width="937" height="501" key="GridCell.Tab.1.left" timestamp="1586428034716">
+    <state width="937" height="322" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979193500" />
+    <state width="937" height="322" key="GridCell.Tab.1.left" timestamp="1587979193500">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="501" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
-    <state width="937" height="501" key="GridCell.Tab.1.right" timestamp="1586428034716">
+    <state width="937" height="322" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979193500" />
+    <state width="937" height="322" key="GridCell.Tab.1.right" timestamp="1587979193500">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="937" height="501" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1586428034716" />
-    <state x="239" y="137" width="1024" height="845" key="SettingsEditor" timestamp="1587794507150">
+    <state width="937" height="322" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587979193500" />
+    <state x="239" y="137" width="1024" height="845" key="SettingsEditor" timestamp="1587800325469">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="239" y="137" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587794507150" />
+    <state x="239" y="137" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1587800325469" />
     <state x="693" y="324" width="524" height="456" key="extract.method.dialog" timestamp="1587754179479">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
